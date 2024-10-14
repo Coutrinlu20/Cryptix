@@ -5,4 +5,4 @@ def index(request):
 
 
 def imagem(request):
-    print()
+    return render(request, 'galeria/imagem.html')
