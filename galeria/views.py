@@ -4,7 +4,7 @@ from galeria.models import Fotografia ##importando os dados do banco##
 
 
 def index(request):
-    fotografias = Fotografia.objects.all()
+    fotografias = Fotografia.objects.filter(publicada=True)#publicação
     return render(request,'galeria/index.html', {"cards": fotografias})
 
 
